@@ -1,9 +1,12 @@
 const express = require('express');
+// Cria servidor
 const app = express();
 const db = require('./db/connection');
 const bodyParcer = require('body-parser');
 
 const PORT = 3000;
+
+app.listen(PORT);
 
 app.use(bodyParcer.urlencoded({extended: false}));
 
