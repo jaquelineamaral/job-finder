@@ -16,16 +16,19 @@ app.use(bodyParcer.urlencoded({extended: false}));
 // Diretorio das views, onde ficara os tamplates
 app.set('views', path.join(__dirname, 'views'));
 // Aquivo principal de layout
-app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.engine('handlebars', exphbs.engine({defaultLayout: 'main'}));
 // View engine, framework/biblioteca que sera utilizada para renderizar as views
 app.set('view engine', 'handlebars');
+
+// Static folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Data base connection
 db.authenticate()
 
 // Routes
 app.get('/', (req, res) => {
-    res.send('Tela Principal');
+    res.render('layouts/index');
 });
 
 // Jobs Routes 

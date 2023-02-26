@@ -38,10 +38,10 @@
 
 #top-container {
     padding: 110px;
-    background-color: black/*#f7f9fc*/;
+    background-color: #f7f9fc;
     border-bottom: 4px solid #013068;
     margin-bottom: 30px;
-    /*background-image: url("../img/banner2.jpg");*/
+    background-image: url("../img/banner2.jpg");
     background-position: 0 100px;
     background-size: cover;
     color: #fff;
@@ -68,6 +68,7 @@
     border-radius: 0;
     height: 50px;
     font-size: 18px;
+    margin: 0;
 }
 
 #search-form button {
