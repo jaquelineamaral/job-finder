@@ -5,6 +5,7 @@ const exphbs = require('express-handlebars');
 const path = require('path');
 const db = require('./db/connection');
 const bodyParcer = require('body-parser');
+const Job = require('./models/Job');
 
 const PORT = 3000;
 
@@ -28,7 +29,12 @@ db.authenticate()
 
 // Routes
 app.get('/', (req, res) => {
-    res.render('layouts/index');
+    Job.findAll({order: [
+        ['createdAt', 'DESC']
+    ]})
+    .then(jobs => {
+        res.render('layouts/index', {jobs});
+    })
 });
 
 // Jobs Routes 
