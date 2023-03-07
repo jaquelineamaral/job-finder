@@ -32,7 +32,9 @@ db.authenticate();
 // Routes
 app.get("/", (req, res) => 
 {
+  // Variavel armazena valor digitado no campo de pesquisa
   let search = req.query.job;
+  // Query usada para buscar palavras(titulo dos empregos) que possuem valor digitado no campo de pesquisa
   let query = '%' + search + '%';
 
   if (!search) 
