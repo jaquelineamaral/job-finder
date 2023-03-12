@@ -63,12 +63,15 @@
     padding: 30px 100px;
 }
 
+#search-form .col-md-10, #search-form .col-md-2 {
+    padding: 0;
+}
+
 #search-form input, #search-form button {
     width: 100%;
     border-radius: 0;
     height: 50px;
     font-size: 18px;
-    margin: 0;
 }
 
 #search-form button {
@@ -97,7 +100,7 @@
     margin-bottom: 5px;
 }
 
-#jobs-list .list-group-item.new-job {
+#job-list .list-group-item.new-job {
     border: none;
     background-color: #fff7cc;
 }
@@ -194,7 +197,7 @@
 /* Job-View */
 
 #job-view-container {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 #job-view-container h1 {
@@ -241,7 +244,7 @@
 
 /* Responsivo */
 
-@media (max-width: 481px) {
+@media (max-width: 991px) {
 
     /* Navbar */
     #navbarNav {
@@ -255,6 +258,10 @@
     }
 
     #main-title {
+        font-size: 2.2rem;
+    }
+
+    #main-subtitle {
         font-size: 1.5rem;
     }
 
