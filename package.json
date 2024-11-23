@@ -12,6 +12,7 @@
     "body-parser": "^1.20.1",
     "express": "^4.18.2",
     "express-handlebars": "^6.0.7",
+    "job-finder": "file:",
     "sequelize": "^6.29.0",
     "sqlite3": "^5.1.5"
   },
